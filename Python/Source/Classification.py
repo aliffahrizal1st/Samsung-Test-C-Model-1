@@ -27,7 +27,7 @@ class Classification:
         self.tuned_keras.add(Dense(3, activation='softmax'))
 
         self.tuned_keras.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-        self.tuned_keras.fit(X, y, epochs=100, batch_size=32, verbose=1)
+        self.tuned_keras.fit(X, y, epochs=150, batch_size=32, verbose=1)
 
         self.tuned_keras.save(TUNED_KERAS)
 
